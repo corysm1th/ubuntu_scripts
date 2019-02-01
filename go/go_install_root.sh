@@ -5,3 +5,4 @@ rm -rf /usr/local/go # remove existing version
 tar -C /usr/local -xzf "${GO_TGZ}"
 grep -q -F 'export PATH=$PATH:/usr/local/go/bin' "${HOME}/.bashrc" || echo 'export PATH=$PATH:/usr/local/go/bin' >> "${HOME}/.bashrc"
 grep -q -F 'export PATH=$PATH:${HOME}/go/bin' "${HOME}/.bashrc" || echo 'export PATH=$PATH:${HOME}/go/bin' >> "${HOME}/.bashrc"
+grep -q -F 'export GOPATH=${HOME}/go' "${HOME}/.bashrc" || echo 'export GOPATH=${HOME}/go' >> "${HOME}/.bashrc"
